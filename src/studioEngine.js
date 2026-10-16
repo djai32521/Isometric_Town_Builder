@@ -1669,7 +1669,7 @@ export function initIsometricStudio() {
         const worldH = HALF_W + (ROWS + COLS) * QUARTER_W + 2 * PAD;
         const isMobile = window.innerWidth <= 768;
         const fitZoom = Math.min(rect.width / worldW, rect.height / worldH) * (isMobile ? 0.96 : 0.9);
-        const minFit = isMobile ? 0.16 : 0.4;
+        const minFit = 0.16;
         camera.zoom = Math.min(Math.max(fitZoom, minFit), 1.2);
         camera.x = rect.width / 2 - WORLD_CENTER_X * camera.zoom;
         camera.y = rect.height / 2 - WORLD_CENTER_Y * camera.zoom;
